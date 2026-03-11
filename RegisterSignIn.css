@@ -1,0 +1,220 @@
+.auth-shell {
+  width: min(var(--max-width), calc(100% - 48px));
+  min-height: calc(100vh - var(--nav-height));
+  margin: 0 auto;
+  padding-top: calc(var(--nav-height) + 30px);
+  padding-bottom: 52px;
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: min(980px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(150deg, var(--surface) 0%, var(--surface-soft) 100%);
+  box-shadow: var(--shadow-soft);
+}
+
+.brand {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.auth-card h1 {
+  margin-top: 10px;
+  font-size: clamp(1.9rem, 4.4vw, 2.8rem);
+  line-height: 1.04;
+  color: var(--brand);
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: var(--text-body);
+}
+
+.mode-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-toggle {
+  position: relative;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px;
+  background: var(--c-7);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.mode-toggle::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+  transition: transform 0.22s ease;
+}
+
+#mode-register:checked ~ .mode-toggle::before {
+  transform: translateX(100%);
+}
+
+.mode-toggle label {
+  position: relative;
+  z-index: 1;
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--brand);
+  cursor: pointer;
+}
+
+#mode-signin:checked ~ .mode-toggle label:first-child,
+#mode-register:checked ~ .mode-toggle label:last-child {
+  color: var(--c-8);
+}
+
+.forms-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.auth-form {
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--c-8);
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.auth-form h2 {
+  margin-bottom: 4px;
+  font-size: 1.35rem;
+  color: var(--brand);
+}
+
+.auth-form label {
+  font-size: 0.82rem;
+  color: var(--text-body);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: var(--c-3);
+  box-shadow: 0 0 0 3px rgba(73, 231, 181, 0.2);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-body);
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-link {
+  color: var(--brand);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  color: var(--mint);
+}
+
+.auth-form button {
+  margin-top: 6px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  color: var(--c-8);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.auth-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.auth-status {
+  margin-top: 14px;
+  min-height: 24px;
+  color: var(--text-body);
+  font-size: 0.9rem;
+}
+
+.auth-status.status-success {
+  color: #166534;
+  font-weight: 600;
+}
+
+.auth-status.status-error {
+  color: #7f1d1d;
+  font-weight: 600;
+}
+
+#mode-signin:checked ~ .forms-grid .register-form,
+#mode-register:checked ~ .forms-grid .sign-in-form {
+  opacity: 0.5;
+  transform: scale(0.99);
+}
+
+@media (max-width: 820px) {
+  .forms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-shell {
+    width: min(var(--max-width), calc(100% - 20px));
+    padding-top: calc(var(--nav-height) + 20px);
+    padding-bottom: 32px;
+  }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventMart - Online Marketplace</title>
+
+  <link rel="stylesheet" href="Landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" style="position:fixed; top:0; left:0; right:0; z-index:1000;">
+    <a href="Landing.html" class="logo">
+      <img src="EVE6.png" alt="EventMart Logo">
+    </a>
+
+    <ul class="navlist">
+      <li><a href="Landing.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="Shop.html">Shop</a>
+        <ul class="dropdown-menu" data-dynamic-shop-menu>
+          <li><a href="Shop.html">All Categories</a></li>
+        </ul>
+      </li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <a href="RegisterSignIn.html" class="reg-text">Register / Sign in</a>
+  </nav>
+
+  <main class="home-main">
+    <section class="market-hero">
+      <div class="market-hero-copy">
+        <h1 id="hero-title">Get Your Event Simple!</h1>
+        <p class="hero-text">
+          Shop or rent curated event equipment in minutes. Compare products, discover recommendations,
+          unlock deals, and build a full setup package for your event from one place.
+        </p>
+        <div class="hero-actions">
+          <a href="Shop.html" class="btn-primary">Shop Now</a>
+          <a href="#package-builder" class="btn-secondary">Create Your Own Package</a>
+        </div>
+        <ul class="hero-points" aria-label="EventMart value points">
+          <li>Thousands of event-ready products</li>
+          <li>Rent or buy with transparent pricing</li>
+          <li>Fast package building for any event type</li>
+        </ul>
+      </div>
+
+      <div class="market-hero-visual" aria-hidden="true">
+        <article class="hero-visual-main">
+          <img src="Group.jpeg" alt="Premium event setup">
+          <span class="hero-visual-tag">Premium Setup Collection</span>
+        </article>
+        <article class="hero-visual-float float-top">
+          <img src="ME.jpeg" alt="Lighting and stage equipment">
+          <p>Lighting + Audio Bundles</p>
+        </article>
+        <article class="hero-visual-float float-bottom">
+          <img src="Goby.jpeg" alt="Event decoration and staging">
+          <p>Trusted by 2,000+ planners</p>
+        </article>
+      </div>
+    </section>
+
+        <section class="quick-categories">
+      <h3 class="section-mini-title">Quick Category Strip</h3>
+      <div class="category-strip">
+        <div class="category-track">
+          <a href="Shop.html" class="category-chip">Sound Systems</a>
+          <a href="Shop.html" class="category-chip">Merchandise</a>
+          <a href="Shop.html" class="category-chip">Giveaways</a>
+          <a href="Shop.html" class="category-chip">Lighting Systems</a>
+          <a href="Shop.html" class="category-chip">Wireless Microphones</a>
+          <a href="Shop.html" class="category-chip">Stage Uplighting</a>
+          <a href="Shop.html" class="category-chip">Promo Booth Kits</a>
+          <a href="Shop.html" class="category-chip">LED Accent Lights</a>
+
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Sound Systems</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Merchandise</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Giveaways</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Lighting Systems</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Wireless Microphones</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Stage Uplighting</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">Promo Booth Kits</a>
+          <a href="Shop.html" class="category-chip" aria-hidden="true" tabindex="-1">LED Accent Lights</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="market-section" aria-labelledby="recommended-title">
+      <div class="section-head">
+        <div>
+          <h2 id="recommended-title">Recommended For You</h2>
+        </div>
+        <a href="Shop.html" class="section-link">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <article class="market-card">
+          <img src="ME.jpeg" alt="Portable sound system">
+          <div class="market-card-body">
+            <h3>Portable Sound System Pro</h3>
+            <p class="card-meta">4.9 rating &bull; 128 reviews</p>
+            <p class="card-price">$420 <span>or rent from $75/day</span></p>
+            <a href="Shop.html" class="card-btn">View Item</a>
+          </div>
+        </article>
+
+        <article class="market-card">
+          <img src="Goby.jpeg" alt="Stage lighting set">
+          <div class="market-card-body">
+            <h3>Stage Lighting Starter Kit</h3>
+            <p class="card-meta">4.8 rating &bull; 96 reviews</p>
+            <p class="card-price">$360 <span>or rent from $62/day</span></p>
+            <a href="Shop.html" class="card-btn">View Item</a>
+          </div>
+        </article>
+
+        <article class="market-card">
+          <img src="Group.jpeg" alt="LED backdrop panel">
+          <div class="market-card-body">
+            <h3>LED Backdrop Display Panel</h3>
+            <p class="card-meta">4.7 rating &bull; 84 reviews</p>
+            <p class="card-price">$590 <span>or rent from $95/day</span></p>
+            <a href="Shop.html" class="card-btn">View Item</a>
+          </div>
+        </article>
+
+        <article class="market-card">
+          <img src="Goby.jpeg" alt="DJ booth setup">
+          <div class="market-card-body">
+            <h3>DJ Booth Performance Set</h3>
+            <p class="card-meta">4.9 rating &bull; 142 reviews</p>
+            <p class="card-price">$510 <span>or rent from $88/day</span></p>
+            <a href="Shop.html" class="card-btn">View Item</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="package-builder" class="package-builder" aria-labelledby="package-title">
+      <div class="package-copy">
+        <h2 id="package-title">Create Your Own Package Now!</h2>
+        <p>
+          Build a complete equipment package based on guest count, event type, venue size, and budget.
+          EventMart recommends matching products so you can launch faster.
+        </p>
+        <div class="package-actions">
+          <a href="Shop.html" class="btn-primary-pack">Start Building</a>
+          <a href="Shop.html" class="btn-secondary-pack">Browse Packages</a>
+        </div>
+      </div>
+
+      <div class="package-features" aria-label="Package builder highlights">
+        <article>
+          <h3>Smart Bundle Suggestions</h3>
+          <p>Get auto-matched products for sound, lighting, stage, and accessories.</p>
+        </article>
+        <article>
+          <h3>Flexible Budget Control</h3>
+          <p>Choose rent or buy options per item without rebuilding your full setup.</p>
+        </article>
+        <article>
+          <h3>One-Click Checkout Flow</h3>
+          <p>Move from planning to secured equipment in a streamlined purchase path.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="market-section" aria-labelledby="deals-title">
+      <div class="section-head">
+        <div>
+          <h2 id="deals-title">Latest Deals!</h2>
+        </div>
+        <a href="Shop.html" class="section-link">See More Deals</a>
+      </div>
+
+      <div class="deal-grid">
+        <article class="deal-card">
+          <span class="deal-badge">-25%</span>
+          <img src="ME.jpeg" alt="Conference audio package">
+          <h3>Conference Audio Package</h3>
+          <p class="deal-price"><strong>$390</strong> <span>$520</span></p>
+          <p class="deal-sub">Buy now or rent from $70/day</p>
+          <a href="Shop.html" class="card-btn">Claim Deal</a>
+        </article>
+
+        <article class="deal-card">
+          <span class="deal-badge">-18%</span>
+          <img src="Group.jpeg" alt="Wedding light tunnel kit">
+          <h3>Wedding Light Tunnel Kit</h3>
+          <p class="deal-price"><strong>$450</strong> <span>$550</span></p>
+          <p class="deal-sub">Limited offer &bull; 2 days left</p>
+          <a href="Shop.html" class="card-btn">Claim Deal</a>
+        </article>
+
+        <article class="deal-card">
+          <span class="deal-badge">Rent + Buy</span>
+          <img src="Goby.jpeg" alt="Outdoor LED screen set">
+          <h3>Outdoor LED Screen Set</h3>
+          <p class="deal-price"><strong>$780</strong> <span>$940</span></p>
+          <p class="deal-sub">Rent from $130/day with setup support</p>
+          <a href="Shop.html" class="card-btn">Claim Deal</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="market-section" aria-labelledby="purpose-title">
+      <div class="section-head">
+        <div>
+          <h2 id="purpose-title">Shop by Event Type</h2>
+        </div>
+      </div>
+
+      <div class="purpose-grid">
+        <a href="Shop.html" class="purpose-card"><h3>Weddings</h3><p>Elegant lighting, stage decor, and premium audio.</p></a>
+        <a href="Shop.html" class="purpose-card"><h3>Birthdays</h3><p>Fun bundles with sound, LED, and party accessories.</p></a>
+        <a href="Shop.html" class="purpose-card"><h3>Corporate Events</h3><p>Professional AV, podium setups, and presentation gear.</p></a>
+        <a href="Shop.html" class="purpose-card"><h3>Concerts</h3><p>Performance-grade systems for live audience impact.</p></a>
+        <a href="Shop.html" class="purpose-card"><h3>Outdoor Events</h3><p>Weather-ready staging and high-visibility display kits.</p></a>
+        <a href="Shop.html" class="purpose-card"><h3>Private Parties</h3><p>Compact all-in-one packs for fast personal setups.</p></a>
+      </div>
+    </section>
+
+    <section class="market-section" aria-labelledby="rent-title">
+      <div class="section-head">
+        <div>
+          <h2 id="rent-title">Explore Essentials.</h2>
+        </div>
+      </div>
+
+      <div class="rent-grid">
+        <article class="rent-card">
+          <img src="Group.jpeg" alt="Stage riser kit">
+          <h3>Stage Riser Kit</h3>
+          <div class="rent-pricing">
+            <p><span>Buy</span><strong>$1,250</strong></p>
+            <p><span>Rent / day</span><strong>$120</strong></p>
+          </div>
+          <div class="rent-actions">
+            <a href="Shop.html" class="btn-primary btn-fill">Buy</a>
+            <a href="Shop.html" class="btn-secondary btn-fill">Rent</a>
+          </div>
+        </article>
+
+        <article class="rent-card">
+          <img src="ME.jpeg" alt="Portable truss and lights">
+          <h3>Portable Truss + Lights</h3>
+          <div class="rent-pricing">
+            <p><span>Buy</span><strong>$980</strong></p>
+            <p><span>Rent / day</span><strong>$95</strong></p>
+          </div>
+          <div class="rent-actions">
+            <a href="Shop.html" class="btn-primary btn-fill">Buy</a>
+            <a href="Shop.html" class="btn-secondary btn-fill">Rent</a>
+          </div>
+        </article>
+
+        <article class="rent-card">
+          <img src="Goby.jpeg" alt="Event speaker tower">
+          <h3>Event Speaker Tower</h3>
+          <div class="rent-pricing">
+            <p><span>Buy</span><strong>$1,100</strong></p>
+            <p><span>Rent / day</span><strong>$105</strong></p>
+          </div>
+          <div class="rent-actions">
+            <a href="Shop.html" class="btn-primary btn-fill">Buy</a>
+            <a href="Shop.html" class="btn-secondary btn-fill">Rent</a>
+          </div>
+        </article>
+
+        <article class="rent-card">
+          <img src="Group.jpeg" alt="LED booth package">
+          <h3>LED Booth Package</h3>
+          <div class="rent-pricing">
+            <p><span>Buy</span><strong>$1,320</strong></p>
+            <p><span>Rent / day</span><strong>$135</strong></p>
+          </div>
+          <div class="rent-actions">
+            <a href="Shop.html" class="btn-primary btn-fill">Buy</a>
+            <a href="Shop.html" class="btn-secondary btn-fill">Rent</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust-section" aria-labelledby="trust-title">
+      <div class="section-head section-head-center">
+        <div>
+          <p class="section-kicker">Why EventMart</p>
+          <h2 id="trust-title">Built for Faster Event Execution</h2>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>Shop or Rent Easily</h3>
+          <p>Switch between purchase and rental options instantly for each product.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Curated Event Equipment</h3>
+          <p>Only high-demand equipment categories with clear specs and pricing.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Smart Recommendations</h3>
+          <p>Discover relevant items and bundles based on what planners actually need.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Build Packages Fast</h3>
+          <p>Create complete setups in a guided flow and move to checkout quickly.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 EventMart | All rights reserved.</p>
+      
+    </div>
+  </footer>
+
+  <script src="landing.js"></script>
+  <script src="navbar-dynamic.js"></script>
+</body>
+</html>
+
+

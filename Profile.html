@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - EventMart</title>
+  <link rel="stylesheet" href="Landing.css">
+  <link rel="stylesheet" href="Profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" style="position:fixed; top:0; left:0; right:0; z-index:1000;">
+    <a href="Landing.html" class="logo">
+      <img src="EVE6.png" alt="EventMart Logo">
+    </a>
+
+    <ul class="navlist">
+      <li><a href="Landing.html">Home</a></li>
+      <li class="dropdown">
+        <a href="Shop.html">Shop</a>
+        <ul class="dropdown-menu" data-dynamic-shop-menu>
+          <li><a href="Shop.html">All Categories</a></li>
+        </ul>
+      </li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+
+    <a href="RegisterSignIn.html" class="reg-text">Register / Sign in</a>
+  </nav>
+
+  <main class="profile-main">
+    <section class="profile-hero panel">
+      <div>
+        <p class="profile-kicker">My Account</p>
+        <h1 id="welcomeName">Welcome</h1>
+        <p class="profile-note">Manage your details, monitor orders, and keep your account up to date.</p>
+      </div>
+      <div class="profile-stats">
+        <article>
+          <p>Total Orders</p>
+          <strong id="ordersCount">0</strong>
+        </article>
+        <article>
+          <p>Active Orders</p>
+          <strong id="ordersActive">0</strong>
+        </article>
+        <article>
+          <p>Total Spent</p>
+          <strong id="ordersTotalSpent">$0.00</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="profile-layout">
+      <article class="panel">
+        <h2>Personal Details</h2>
+        <p class="muted-text">Update your profile information and password.</p>
+
+        <form id="profileForm" class="profile-form">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <div class="form-grid">
+            <div>
+              <label for="currentPassword">Current Password</label>
+              <input id="currentPassword" name="currentPassword" type="password" placeholder="Only if changing password">
+            </div>
+            <div>
+              <label for="newPassword">New Password</label>
+              <input id="newPassword" name="newPassword" type="password" placeholder="Min 6 characters">
+            </div>
+          </div>
+
+          <label for="confirmNewPassword">Confirm New Password</label>
+          <input id="confirmNewPassword" name="confirmNewPassword" type="password">
+
+          <button id="profileSaveBtn" class="btn-primary-submit" type="submit">Save Changes</button>
+          <p id="profileStatus" class="status-text" aria-live="polite"></p>
+        </form>
+      </article>
+
+      <article class="panel">
+        <h2>Account Snapshot</h2>
+        <div class="snapshot-list">
+          <div>
+            <span>Role</span>
+            <strong id="profileRole">customer</strong>
+          </div>
+          <div>
+            <span>Joined</span>
+            <strong id="profileJoined">-</strong>
+          </div>
+          <div>
+            <span>Last Login</span>
+            <strong id="profileLastLogin">-</strong>
+          </div>
+        </div>
+
+        <div class="tools-box">
+          <h3>Quick Actions</h3>
+          <button id="refreshOrdersBtn" class="btn-ghost" type="button">Refresh Orders</button>
+          <button id="logoutBtn" class="btn-danger" type="button">Sign Out</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="orders-head">
+        <div>
+          <h2>Order Tracking</h2>
+          <p class="muted-text">Track current status of your past and active orders.</p>
+        </div>
+
+        <select id="orderStatusFilter">
+          <option value="all">All Statuses</option>
+          <option value="pending">Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="processing">Processing</option>
+          <option value="shipped">Shipped</option>
+          <option value="delivered">Delivered</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <div id="ordersList" class="orders-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 EventMart | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="navbar-dynamic.js"></script>
+  <script src="Profile.js"></script>
+</body>
+</html>
